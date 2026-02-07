@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"my-mcp-server-9146d7f2": {
+			"url": "https://mcp.clerk.dev/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
