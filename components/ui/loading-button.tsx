@@ -6,7 +6,8 @@ import type * as React from "react";
 import { Button, type buttonVariants } from "@/components/ui/button";
 
 interface LoadingButtonProps
-  extends React.ComponentProps<"button">, VariantProps<typeof buttonVariants> {
+  extends React.ComponentProps<"button">,
+    VariantProps<typeof buttonVariants> {
   loading?: boolean;
   loadingText?: string;
   asChild?: boolean;

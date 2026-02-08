@@ -10,12 +10,13 @@
     "format": "biome format --write",
     "typegen": "sanity schema extract --path=./schema.json && sanity typegen generate",
     "update-types": "pnpm run typegen",
-    "seed": "npx tsx scripts/seed/seed.ts",
-    "seed:clean": "npx tsx scripts/seed/seed.ts --clean"
+    "seed": "npx tsx scripts/seed.ts",
+    "seed:clean": "npx tsx scripts/seed.ts --clean"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.3",
     "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-slot": "^1.2.4",
     "@sanity/client": "^7.14.1",
     "@sanity/image-url": "^1.2.0",

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "@/lib/sanity/image";
 import type { Property } from "@/types";
 
 interface PropertyCardProps {
@@ -15,12 +15,12 @@ interface PropertyCardProps {
   showRemoveButton?: boolean;
 }
 
-const PropertyCard = ({
+export function PropertyCard({
   property,
   onSave,
   isSaved,
   showRemoveButton: _showRemoveButton,
-}: PropertyCardProps) => {
+}: PropertyCardProps) {
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -161,5 +161,4 @@ const PropertyCard = ({
       </article>
     </Link>
   );
-};
-export default PropertyCard;
+}

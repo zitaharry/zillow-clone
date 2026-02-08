@@ -1,7 +1,7 @@
 "use client";
 
 import type { Property } from "@/types";
-import PropertyCard from "./PropertyCard";
+import { PropertyCard } from "./PropertyCard";
 
 interface PropertyGridProps {
   properties: Property[];
@@ -10,12 +10,12 @@ interface PropertyGridProps {
   showRemoveButton?: boolean;
 }
 
-const PropertyGrid = ({
+export function PropertyGrid({
   properties,
   onSave,
   savedIds = [],
   showRemoveButton,
-}: PropertyGridProps) => {
+}: PropertyGridProps) {
   if (properties.length === 0) {
     return (
       <div className="text-center py-12">
@@ -37,5 +37,4 @@ const PropertyGrid = ({
       ))}
     </div>
   );
-};
-export default PropertyGrid;
+}
